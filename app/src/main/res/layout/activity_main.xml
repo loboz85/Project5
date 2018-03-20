@@ -52,6 +52,6 @@
             android:id="@+id/phrases"
             style="@style/CategoryStyle"
             android:background="?android:attr/selectableItemBackground"
-            android:text="@string/category_phrases" />
+            android:text="Phrases" />
     </FrameLayout>
 </LinearLayout>
