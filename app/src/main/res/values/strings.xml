@@ -138,4 +138,14 @@
 
     <!-- Vocabulary phrase for "Come here." [CHAR LIMIT=20] -->
     <string name="phrase_come_here">Come here.</string>
+
+    <string name="addressJurkovic">Jana Nečase 2, 61600 Brno</string>
+
+    <string name="addressLow">350 5th Ave, New York, NY 10118, USA</string>
+
+    <string name="addressOTC">285 Fulton St, New York, NY 10007, USA</string>
+
+
+    <string name="goTo">google.navigation:q=</string>
+
 </resources>

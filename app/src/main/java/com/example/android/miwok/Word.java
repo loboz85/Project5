@@ -17,27 +17,15 @@ public class Word {
     /** Image resource ID for the word */
     private int mImageResourceId;
 
-    /** Audio resource ID for the word */
-    private int mAudioResourceId;;
+    //Location coordinates
+    private String mMapLocation;
 
-    /**
-     * Create a new Word object.
-     *
-     * @param defaultTranslation is the word in a language that the user is already familiar with
-     *                           (such as English)
-     * @param miwokTranslation is the word in the Miwok language
-     *
-     */
-    public Word(String defaultTranslation, String miwokTranslation, int audioResourceId) {
-        mDefaultTranslation = defaultTranslation;
-        mMiwokTranslation = miwokTranslation;
-        mAudioResourceId = audioResourceId;
-    }
-    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId, int audioResourceId) {
+
+    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId, String mapLocation) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
         mImageResourceId= imageResourceId;
-        mAudioResourceId = audioResourceId;
+        mMapLocation= mapLocation;
     }
     /**
      * Get the default translation of the word.
@@ -60,13 +48,14 @@ public class Word {
         return mImageResourceId;
         }
 
-    /**
-     * Return the audio resource ID of the word.
-     */
-    public int getAudioResourceId() {
-        return mAudioResourceId;
-    }
 
+
+    /**
+     * Get location
+     */
+    public String getMapLocation() {
+        return mMapLocation;
+    }
 
 
 
