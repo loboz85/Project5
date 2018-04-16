@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 /**
  * {@link CategoryAdapter} is a {@link FragmentPagerAdapter} that can provide the layout for
- * each list item based on a data source which is a list of {@link Word} objects.
+ * each list item based on a data source which is a list of {@link Place} objects.
  */
 public class CategoryAdapter extends FragmentPagerAdapter {
 
@@ -32,11 +32,11 @@ public class CategoryAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
-            return new NumbersFragment();
+            return new ArchitectureFragment();
         } else if (position == 1) {
             return new FamilyFragment();
         } else if (position == 2) {
-            return new ColorsFragment();
+            return new PanoramasFragment();
         } else {
             return new PhrasesFragment();
         }
@@ -53,13 +53,13 @@ public class CategoryAdapter extends FragmentPagerAdapter {
     @Override
     public CharSequence getPageTitle(int position) {
         if (position == 0) {
-            return mContext.getString(R.string.category_numbers);
+            return mContext.getString(R.string.category_architecture);
         } else if (position == 1) {
-            return mContext.getString(R.string.category_family);
+            return mContext.getString(R.string.category_museums);
         } else if (position == 2) {
-            return mContext.getString(R.string.category_colors);
+            return mContext.getString(R.string.category_panoramas);
         } else {
-            return mContext.getString(R.string.category_phrases);
+            return mContext.getString(R.string.category_spots);
         }
     }
 }

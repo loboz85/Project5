@@ -16,10 +16,7 @@
 package com.example.android.miwok;
 
 
-import android.content.Context;
 import android.content.Intent;
-import android.media.AudioManager;
-import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -34,43 +31,41 @@ import java.util.ArrayList;
 /**
  * {@link Fragment} that displays a list of color vocabulary words.
  */
-public class ColorsFragment extends Fragment {
+public class PanoramasFragment extends Fragment {
 
 
-    public ColorsFragment() {
+    public PanoramasFragment() {
         // Required empty public constructor
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.word_list, container, false);
+        View rootView = inflater.inflate(R.layout.place_list, container, false);
 
         // Create and setup the {@link AudioManager} to request au
 
-        // Create a list of words
-        final ArrayList<Word> words = new ArrayList<Word>();
-        words.add(new Word("one", "lutti", R.drawable.number_one, getString(R.string.addressJurkovic)));
-        words.add(new Word("two", "otiiko", R.drawable.number_two,getString(R.string.addressJurkovic)));
-        words.add(new Word("three", "tolookosu", R.drawable.number_three,getString(R.string.addressJurkovic)));
-        words.add(new Word("four", "oyyisa", R.drawable.number_four,getString(R.string.addressJurkovic)));
-        words.add(new Word("five", "massokka", R.drawable.number_five,getString(R.string.addressJurkovic)));
-        words.add(new Word("six", "temmokka", R.drawable.number_six,getString(R.string.addressJurkovic)));
-        words.add(new Word("seven", "kenekaku", R.drawable.number_seven,getString(R.string.addressJurkovic)));
-        words.add(new Word("eight", "kawinta", R.drawable.number_eight,getString(R.string.addressJurkovic)));
-        words.add(new Word("nine", "wo’e", R.drawable.number_nine,getString(R.string.addressJurkovic)));
-        words.add(new Word("ten", "na’aacha", R.drawable.number_ten,getString(R.string.addressJurkovic)));
+        // Create a list of places
+        final ArrayList<Place> places = new ArrayList<Place>();
+        places.add(new Place(getString(R.string.desRock), getString(R.string.nameRock),
+                R.drawable.top, getString(R.string.locRock)));
+        places.add(new Place(getString(R.string.desStaten), getString(R.string.nameStaten),
+                R.drawable.staten, getString(R.string.locStaten)));
+        places.add(new Place(getString(R.string.desOne), getString(R.string.nameOne),
+                R.drawable.wtc, getString(R.string.locOne)));
+        places.add(new Place(getString(R.string.desTram), getString(R.string.nameTram),
+                R.drawable.tram, getString(R.string.locTram)));
 
-        // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
+        // Create an {@link PlaceAdapter}, whose data source is a list of {@link Place}s. The
         // adapter knows how to create list items for each item in the list.
-        WordAdapter adapter = new WordAdapter(getActivity(), words, R.color.category_numbers);
+        PlaceAdapter adapter = new PlaceAdapter(getActivity(), places, R.color.category_numbers);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
-        // word_list.xml layout file.
+        // place_list.xmll layout file.
         ListView listView = (ListView) rootView.findViewById(R.id.list);
 
-        // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
-        // {@link ListView} will display list items for each {@link Word} in the list.
+        // Make the {@link ListView} use the {@link PlaceAdapter} we created above, so that the
+        // {@link ListView} will display list items for each {@link Place} in the list.
         listView.setAdapter(adapter);
 
 
@@ -82,7 +77,7 @@ public class ColorsFragment extends Fragment {
         {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                final String goToAddress = getString(R.string.goTo) + words.get(position);
+                final String goToAddress = getString(R.string.goTo) + places.get(position);
                 Intent gps = new Intent(Intent.ACTION_VIEW);
                 gps.setData(Uri.parse(goToAddress));
                 startActivity(gps);
