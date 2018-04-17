@@ -51,7 +51,7 @@ public class PanoramasFragment extends Fragment {
         places.add(new Place(getString(R.string.desStaten), getString(R.string.nameStaten),
                 R.drawable.staten, getString(R.string.locStaten)));
         places.add(new Place(getString(R.string.desOne), getString(R.string.nameOne),
-                R.drawable.wtc, getString(R.string.locOne)));
+                R.drawable.oneworld, getString(R.string.locOne)));
         places.add(new Place(getString(R.string.desTram), getString(R.string.nameTram),
                 R.drawable.tram, getString(R.string.locTram)));
 
@@ -73,13 +73,13 @@ public class PanoramasFragment extends Fragment {
 
 
         // Set a click listener to play the audio when the list item is clicked on
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
-        {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                final String goToAddress = getString(R.string.goTo) + places.get(position);
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Place place = places.get(position);
+                final String takeMeTo = getString(R.string.goTo) + place.getMapLocation();
                 Intent gps = new Intent(Intent.ACTION_VIEW);
-                gps.setData(Uri.parse(goToAddress));
+                gps.setData(Uri.parse(takeMeTo));
                 startActivity(gps);
 
             }

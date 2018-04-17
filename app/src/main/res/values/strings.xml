@@ -14,7 +14,7 @@
     <string name="app_name">NYC Tour Guide</string>
 
     <!-- Category name for spots [CHAR LIMIT=20] -->
-    <string name="category_spots">Spot</string>
+    <string name="category_spots">Spots</string>
 
     <!-- Category name for the panoramas [CHAR LIMIT=20] -->
     <string name="category_panoramas">City View</string>
@@ -23,7 +23,7 @@
     <string name="category_architecture">Arch</string>
 
     <!-- Category name for the museums[CHAR LIMIT=20] -->
-    <string name="category_museums">Museum</string>
+    <string name="category_museums">Museums</string>
 
     <!-- Vocabulplaceword for the color red [CHAR LIMIT=20] -->
     <string name="color_red">red</string>
@@ -182,6 +182,75 @@
     <!-- address-->
     <string name="locBrooklyn">Brooklyn Bridge, New York, NY 10038, USA</string>
 
+    <!-- Spots-->
+    <!-- Vocabulary phrase for The High Line-->
+    <!-- name-->
+    <string name="nameHigh">The High Line</string>
+    <!-- description-->
+    <string name="desHigh">Elevated railway transformed into a public park on Manhattans West Side</string>
+    <!-- address-->
+    <string name="locHigh">New York, NY 10011, USA</string>
+
+    <!-- Vocabulary phrase for Times Square-->
+    <!-- name-->
+    <string name="nameTimes">Times Square</string>
+    <!-- description-->
+    <string name="desTimes">Five-block metaphor for New York City itself</string>
+    <!-- address-->
+    <string name="locTimes">Manhattan, NY 10036, USA</string>
+
+    <!-- Vocabulary phrase for Central Park->
+    <!- name-->
+    <string name="nameCentral">Central Park</string>
+    <!-- description-->
+    <string name="desCentral">The most famous park in the world</string>
+    <!-- address-->
+    <string name="locCentral">79th Street, New York, NY 10022, USA</string>
+
+
+    <!-- Vocabulary phrase for Statue of Liberty->
+    <!- name-->
+    <string name="nameStatue">Statue of Liberty</string>
+    <!-- description-->
+    <string name="desStatue">Universal symbol of freedom and democracy</string>
+    <!-- address-->
+    <string name="locStatue">New York, NY 10004, USA</string>
+
+    <!-- Museums-->
+    <!-- Vocabulary phrase for The Museum of Modern Art (MoMA)->
+    <!- name-->
+    <string name="nameMoma">The Museum of Modern Art (MoMA)</string>
+    <!-- description-->
+    <string name="desMoma">Worlds greatest collection of modern and contemporary art</string>
+    <!-- address-->
+    <string name="locMoma">11 W 53rd St, New York, NY 10019, USA</string>
+
+    <!-- Vocabulary phrase for The Metropolitan Museum of Art-->
+    <!-- name-->
+    <string name="nameMet">The Metropolitan Museum of Art</string>
+    <!-- description-->
+    <string name="desMet">New York City most visited museum and attraction</string>
+    <!-- address-->
+    <string name="locMet">1000 5th Ave, New York, NY 10028, USA</string>
+
+    <!-- Vocabulary phrase for The National 9/11 Memorial & Museum->
+    <!- name-->
+    <string name="nameWtc">The National 9/11 Memorial and Museum</string>
+    <!-- description-->
+    <string name="desWtc">Plaza, pools and exhibits honoring victims of 1993 and 2001 WTC terrorist attacks</string>
+    <!-- address-->
+    <string name="locWtc">180 Greenwich St, New York, NY 10007, USA</string>
+
+
+    <!-- Vocabulary phrase for Solomon R. Guggenheim Museum->
+    <!- name-->
+    <string name="nameGuggenheim">Solomon R. Guggenheim Museum</string>
+    <!-- description-->
+    <string name="desGuggenheim">The circular Frank Lloyd Wright-designed building is as much of a draw as the museums
+        collection of modern art</string>
+    <!-- address-->
+    <string name="locGuggenheim">1071 5th Ave, New York, NY 10128, USA</string>
+
     <!-- Panoramas-->
     <!-- Vocabulary phrase for Top of the Rock-->
     <!-- name-->
@@ -215,7 +284,5 @@
     <string name="desTram">Amazing scenic views of Manhattan</string>
     <!-- address-->
     <string name="locTram">E 59th St and 2nd Avenue, New York, NY 10022, USA</string>
-
-
 
 </resources>

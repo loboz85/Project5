@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="150dp"
-    android:background="@color/tan_background"
+    android:background="@color/white"
     android:minHeight="@dimen/list_item_height">
 
     <ImageView
@@ -20,31 +20,33 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@id/image"
+        android:background="@color/white"
         android:orientation="vertical"
         android:paddingLeft="16dp">
 
         <TextView
-            android:id="@+id/miwok_text_view"
+            android:id="@+id/name_text_view"
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_weight="1"
             android:gravity="bottom"
             android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="@android:color/white"
+            android:textColor="@color/red"
             android:textStyle="bold"
-            tools:text="lutti" />
+            tools:text="Place name" />
 
         <TextView
-            android:id="@+id/default_text_view"
+            android:id="@+id/description_text_view"
             android:layout_width="match_parent"
             android:layout_height="88dp"
-            android:layout_below="@id/miwok_text_view"
+            android:layout_below="@id/name_text_view"
             android:layout_weight="1"
             android:gravity="top"
             android:textAppearance="?android:textAppearanceMedium"
             android:textSize="12dp"
-            android:textColor="@android:color/white"
-            tools:text="one" />
+            android:textColor="@color/grey"
+            android:textStyle="bold"
+            tools:text="Description" />
 
         <ImageView
             android:layout_width="24dp"

@@ -31,10 +31,10 @@ import java.util.ArrayList;
 /**
  * {@link Fragment} that displays a list of family vocabulary words.
  */
-public class FamilyFragment extends Fragment {
+public class MuseumsFragment extends Fragment {
 
 
-    public FamilyFragment() {
+    public MuseumsFragment() {
         // Required empty public constructor
     }
 
@@ -47,16 +47,14 @@ public class FamilyFragment extends Fragment {
 
         // Create a list of places
         final ArrayList<Place> places = new ArrayList<Place>();
-        places.add(new Place("one", "lutti", R.drawable.number_one, getString(R.string.addressJurkovic)));
-        places.add(new Place("two", "otiiko", R.drawable.number_two,getString(R.string.addressJurkovic)));
-        places.add(new Place("three", "tolookosu", R.drawable.number_three,getString(R.string.addressJurkovic)));
-        places.add(new Place("four", "oyyisa", R.drawable.number_four,getString(R.string.addressJurkovic)));
-        places.add(new Place("five", "massokka", R.drawable.number_five,getString(R.string.addressJurkovic)));
-        places.add(new Place("six", "temmokka", R.drawable.number_six,getString(R.string.addressJurkovic)));
-        places.add(new Place("seven", "kenekaku", R.drawable.number_seven,getString(R.string.addressJurkovic)));
-        places.add(new Place("eight", "kawinta", R.drawable.number_eight,getString(R.string.addressJurkovic)));
-        places.add(new Place("nine", "wo’e", R.drawable.number_nine,getString(R.string.addressJurkovic)));
-        places.add(new Place("ten", "na’aacha", R.drawable.number_ten,getString(R.string.addressJurkovic)));
+        places.add(new Place(getString(R.string.desMoma), getString(R.string.nameMoma),
+                R.drawable.moma, getString(R.string.locMoma)));
+        places.add(new Place(getString(R.string.desMet), getString(R.string.nameMet),
+                R.drawable.met, getString(R.string.locMet)));
+        places.add(new Place(getString(R.string.desWtc), getString(R.string.nameWtc),
+                R.drawable.wtc, getString(R.string.locWtc)));
+        places.add(new Place(getString(R.string.desGuggenheim), getString(R.string.nameGuggenheim),
+                R.drawable.guggenheim, getString(R.string.locGuggenheim)));
 
         // Create an {@link PlaceAdapter}, whose data source is a list of {@link Place}s. The
         // adapter knows how to create list items for each item in the list.
@@ -76,13 +74,13 @@ public class FamilyFragment extends Fragment {
 
 
         // Set a click listener to play the audio when the list item is clicked on
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
-        {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                final String goToAddress = getString(R.string.goTo) + places.get(position);
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Place place = places.get(position);
+                final String takeMeTo = getString(R.string.goTo) + place.getMapLocation();
                 Intent gps = new Intent(Intent.ACTION_VIEW);
-                gps.setData(Uri.parse(goToAddress));
+                gps.setData(Uri.parse(takeMeTo));
                 startActivity(gps);
 
             }
