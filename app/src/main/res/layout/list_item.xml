@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="150dp"
-    android:background="@color/white"
-    android:minHeight="@dimen/list_item_height">
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/image"
         android:layout_width="@dimen/list_item_height"
-        android:layout_height="@dimen/list_item_height" />
+        android:layout_height="@dimen/list_item_height"
+        android:layout_marginLeft="8dp"
+        android:layout_centerVertical="true"/>
 
     <RelativeLayout
         android:id="@+id/text_container"
@@ -20,15 +21,15 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@id/image"
+        android:gravity="center_vertical"
         android:background="@color/white"
         android:orientation="vertical"
-        android:paddingLeft="16dp">
+        android:paddingLeft="8dp">
 
         <TextView
             android:id="@+id/name_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:layout_weight="1"
+            android:layout_width="170dp"
+            android:layout_height="68dp"
             android:gravity="bottom"
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@color/red"
@@ -37,7 +38,7 @@
 
         <TextView
             android:id="@+id/description_text_view"
-            android:layout_width="match_parent"
+            android:layout_width="160dp"
             android:layout_height="88dp"
             android:layout_below="@id/name_text_view"
             android:layout_weight="1"
@@ -53,7 +54,8 @@
             android:layout_height="24dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="16dp"
-            android:src="@drawable/ic_play_arrow_white_24dp" />
+            android:layout_marginRight="8dp"
+            android:layout_toRightOf="@id/description_text_view"
+            android:src="@drawable/map" />
     </RelativeLayout>
 </RelativeLayout>

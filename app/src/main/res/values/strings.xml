@@ -20,10 +20,10 @@
     <string name="category_panoramas">City View</string>
 
     <!-- Category name for architecture [CHAR LIMIT=20] -->
-    <string name="category_architecture">Arch</string>
+    <string name="category_architecture">ARCH</string>
 
     <!-- Category name for the museums[CHAR LIMIT=20] -->
-    <string name="category_museums">Museums</string>
+    <string name="category_museums">ART</string>
 
     <!-- Vocabulplaceword for the color red [CHAR LIMIT=20] -->
     <string name="color_red">red</string>
@@ -235,7 +235,7 @@
 
     <!-- Vocabulary phrase for The National 9/11 Memorial & Museum->
     <!- name-->
-    <string name="nameWtc">The National 9/11 Memorial and Museum</string>
+    <string name="nameWtc">The 9/11 Memorial and Museum</string>
     <!-- description-->
     <string name="desWtc">Plaza, pools and exhibits honoring victims of 1993 and 2001 WTC terrorist attacks</string>
     <!-- address-->
@@ -244,7 +244,7 @@
 
     <!-- Vocabulary phrase for Solomon R. Guggenheim Museum->
     <!- name-->
-    <string name="nameGuggenheim">Solomon R. Guggenheim Museum</string>
+    <string name="nameGuggenheim">Guggenheim Museum</string>
     <!-- description-->
     <string name="desGuggenheim">The circular Frank Lloyd Wright-designed building is as much of a draw as the museums
         collection of modern art</string>
