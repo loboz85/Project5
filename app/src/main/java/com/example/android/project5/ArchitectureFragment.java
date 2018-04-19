@@ -1,4 +1,4 @@
-package com.example.android.miwok;
+package com.example.android.project5;
 
 
 import android.content.Intent;
@@ -58,7 +58,7 @@ public class ArchitectureFragment extends Fragment {
         //open maps  with onClickListener
 
 
-        // Set a click listener to play the audio when the list item is clicked on
+        // Set a click listener to show route to selected place when the list item is clicked on
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {

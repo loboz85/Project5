@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.miwok;
+package com.example.android.project5;
 
 
 import android.content.Intent;
@@ -29,14 +29,15 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 /**
- * {@link Fragment} that displays a list of color vocabulary words.
+ * {@link Fragment} that displays a list of family vocabulary words.
  */
-public class PanoramasFragment extends Fragment {
+public class MuseumsFragment extends Fragment {
 
 
-    public PanoramasFragment() {
+    public MuseumsFragment() {
         // Required empty public constructor
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -46,14 +47,14 @@ public class PanoramasFragment extends Fragment {
 
         // Create a list of places
         final ArrayList<Place> places = new ArrayList<Place>();
-        places.add(new Place(getString(R.string.desRock), getString(R.string.nameRock),
-                R.drawable.top, getString(R.string.locRock)));
-        places.add(new Place(getString(R.string.desStaten), getString(R.string.nameStaten),
-                R.drawable.staten, getString(R.string.locStaten)));
-        places.add(new Place(getString(R.string.desOne), getString(R.string.nameOne),
-                R.drawable.oneworld, getString(R.string.locOne)));
-        places.add(new Place(getString(R.string.desTram), getString(R.string.nameTram),
-                R.drawable.tram, getString(R.string.locTram)));
+        places.add(new Place(getString(R.string.desMoma), getString(R.string.nameMoma),
+                R.drawable.moma, getString(R.string.locMoma)));
+        places.add(new Place(getString(R.string.desMet), getString(R.string.nameMet),
+                R.drawable.met, getString(R.string.locMet)));
+        places.add(new Place(getString(R.string.desWtc), getString(R.string.nameWtc),
+                R.drawable.wtc, getString(R.string.locWtc)));
+        places.add(new Place(getString(R.string.desGuggenheim), getString(R.string.nameGuggenheim),
+                R.drawable.guggenheim, getString(R.string.locGuggenheim)));
 
         // Create an {@link PlaceAdapter}, whose data source is a list of {@link Place}s. The
         // adapter knows how to create list items for each item in the list.
@@ -61,7 +62,7 @@ public class PanoramasFragment extends Fragment {
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
-        // place_list.xmll layout file.
+        // place_listt.xml layout file.
         ListView listView = (ListView) rootView.findViewById(R.id.list);
 
         // Make the {@link ListView} use the {@link PlaceAdapter} we created above, so that the
@@ -72,7 +73,7 @@ public class PanoramasFragment extends Fragment {
         //open maps  with onClickListener
 
 
-        // Set a click listener to play the audio when the list item is clicked on
+        // Set a click listener to show route to selected place when the list item is clicked on
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {

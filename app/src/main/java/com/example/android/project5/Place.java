@@ -1,4 +1,4 @@
-package com.example.android.miwok;
+package com.example.android.project5;
 
 /**
  * Created by loboz on 05.03.2018.

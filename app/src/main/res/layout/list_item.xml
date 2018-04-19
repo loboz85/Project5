@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="@dimen/layout_height"
     android:background="@color/white">
 
     <ImageView
         android:id="@+id/image"
         android:layout_width="@dimen/list_item_height"
         android:layout_height="@dimen/list_item_height"
-        android:layout_marginLeft="8dp"
-        android:layout_centerVertical="true"/>
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin" />
 
     <RelativeLayout
         android:id="@+id/text_container"
@@ -21,15 +20,15 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@id/image"
-        android:gravity="center_vertical"
         android:background="@color/white"
+        android:gravity="center_vertical"
         android:orientation="vertical"
-        android:paddingLeft="8dp">
+        android:paddingLeft="@dimen/margin">
 
         <TextView
             android:id="@+id/name_text_view"
-            android:layout_width="170dp"
-            android:layout_height="68dp"
+            android:layout_width="@dimen/name_width"
+            android:layout_height="@dimen/name_height"
             android:gravity="bottom"
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@color/red"
@@ -38,23 +37,22 @@
 
         <TextView
             android:id="@+id/description_text_view"
-            android:layout_width="160dp"
-            android:layout_height="88dp"
+            android:layout_width="@dimen/des_width"
+            android:layout_height="@dimen/list_item_height"
             android:layout_below="@id/name_text_view"
-            android:layout_weight="1"
             android:gravity="top"
             android:textAppearance="?android:textAppearanceMedium"
-            android:textSize="12dp"
             android:textColor="@color/grey"
+            android:textSize="@dimen/des_text_size"
             android:textStyle="bold"
             tools:text="Description" />
 
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="@dimen/image"
+            android:layout_height="@dimen/image"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="8dp"
+            android:layout_marginRight="@dimen/margin"
             android:layout_toRightOf="@id/description_text_view"
             android:src="@drawable/map" />
     </RelativeLayout>

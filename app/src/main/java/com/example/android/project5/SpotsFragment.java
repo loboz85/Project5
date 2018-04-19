@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.miwok;
+package com.example.android.project5;
 
 
 import android.content.Intent;
@@ -68,8 +68,7 @@ public class SpotsFragment extends Fragment {
         listView.setAdapter(adapter);
 
 
-        //open maps  with onClickListener
-
+        // Set a click listener to show route to selected place when the list item is clicked on
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

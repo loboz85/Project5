@@ -15,12 +15,12 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/primary_color</item>
         <item name="colorPrimaryDark">@color/primary_dark_color</item>
-        <item name="actionBarStyle">@style/MiwokAppBarStyle</item>
+        <item name="actionBarStyle">@style/GuideAppBarStyle</item>
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
     <!-- App bar style -->
-    <style name="MiwokAppBarStyle" parent="Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+    <style name="GuideAppBarStyle" parent="Widget.AppCompat.Light.ActionBar.Solid.Inverse">
         <!-- Remove the shadow below the app bar -->
         <item name="elevation">0dp</item>
     </style>
